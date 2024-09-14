@@ -1,6 +1,23 @@
 ![Alt text](banner.png)
+
 # php-PIOT
 This is a framework support for you control to electronic board as Uno, Esp32, Esp8266, Atmega2560 ...etc
+
+# Support features
+        | Feature      | LED  |
+        |--------------|------|
+        | LED          | ✔    | 
+        | LCD 1620     |      |
+        | LCD 1604     |      |    
+        | LCD OLED     |      |  
+        | SD Card      |      |    
+        | OV2640       |      |     
+        | L293D        |      |     
+        | L293D        |      |     
+        | Arduino CNC  |      |
+        | Shield V3    |      |
+        | ESP8266      |      |
+
 # How to install? 
 First you need connect your electronic board by USB. After you need check what's number COM?
 Next step you need download this repo and try control led feature.
