@@ -50,3 +50,6 @@ Next step you need download this repo and try control led feature.
             echo $connect->receive() . ' | ';
             sleep(3);
     ```
+
+# Hardware 
+Visi here https://github.com/steveleetn91/piot
