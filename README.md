@@ -51,5 +51,11 @@ Next step you need download this repo and try control led feature.
             sleep(3);
     ```
 
+Hardware 
+
+![Alt text](led.png)
+
+View full at here: https://github.com/steveleetn91/php-PIOT/tree/dev/Hardware/README.md
+
 # Hardware 
 Visi here https://github.com/steveleetn91/piot
