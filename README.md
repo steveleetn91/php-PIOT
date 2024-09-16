@@ -31,6 +31,7 @@ Visit here https://github.com/steveleetn91/php-PIOT/blob/dev/ExampleLed.php
 Hardware 
 1. Arduino Uno
 2. 330Ω resistor
+3. LED
 
 ![Alt text](led.png) 
 
