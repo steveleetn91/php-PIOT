@@ -25,7 +25,7 @@ This is a framework support for you control to electronic board as Uno, Esp32, E
 First you need connect your electronic board by USB. After you need check what's number COM?
 Next step you need download this repo and try control led feature.
 
-Visit here https://github.com/steveleetn91/php-PIOT/tree/dev/ExampleLed.md 
+Visit here https://github.com/steveleetn91/php-PIOT/blob/dev/ExampleLed.php
 
 Hardware 
 
