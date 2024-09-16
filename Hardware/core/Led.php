@@ -29,6 +29,6 @@ class Led implements LedInterface {
     public function recieve(string $electronicBoardResponse): string | Exception
     {   
         return intval($electronicBoardResponse) === LED_ON ? 'LED_ON' : 
-        intval($electronicBoardResponse) === LED_OFF ? 'LED_OFF' : throw new \Exception("Not support");
+        (intval($electronicBoardResponse) === LED_OFF ? 'LED_OFF' : throw new \Exception("Not support"));
     }
 }
