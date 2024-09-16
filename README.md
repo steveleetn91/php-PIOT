@@ -22,12 +22,15 @@ This is a framework support for you control to electronic board as Uno, Esp32, E
         | robot arm    |          |
 
 ## How to install? 
-First you need connect your electronic board by USB. After you need check what's number COM?
-Next step you need download this repo and try control led feature.
+1. First you need connect your electronic board by USB.
+2. After you need check what's number COM?
+3. Next step you need download this repo and try control led feature.
 
 Visit here https://github.com/steveleetn91/php-PIOT/blob/dev/ExampleLed.php
 
 Hardware 
+1. Arduino Uno
+2. 330Ω resistor
 
 ![Alt text](led.png) 
 
