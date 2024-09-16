@@ -9,8 +9,11 @@ use PIOT\Hardware\Factory\HardwareFactory;
 try {
     $usbFactory = new USBConnectingFactory();
     $connect = $usbFactory->create(true);
+    // change your number com ( USB COM connecting ), at here I have COM3
     $connect->setSerial(3);
+    // change BAUD like hardware
     $connect->setBAUD(9600);
+    // Delay time for read data from device
     $connect->setReceiveDelay(3);
 
     $hardwareFactory = new HardwareFactory();

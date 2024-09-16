@@ -5,5 +5,6 @@ This is docs support for you connect hardware. Currently framework will decision
 ## LED
 - Prepare:
         - Registor value 1000
+        - Led 3.3v
 
 ![Alt text](../led.png)
