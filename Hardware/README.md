@@ -5,5 +5,14 @@ This is docs support for you connect hardware. Currently framework will decision
 ## LED
 - Prepare:
         - Registor value 1000
+        - Arduino Uno / Arduino Nano / Arduino Mega / Esp32 / ESP8266
 
 ![Alt text](../led.png)
+
+## LCD1602
+- Prepare:
+        - LCD 1602
+        - IC2
+        - Arduino Uno / Arduino Nano / Arduino Mega / Esp32 / ESP8266
+
+![Alt text](../LCD1602.png)
