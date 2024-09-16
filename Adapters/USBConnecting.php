@@ -5,6 +5,9 @@
  * Currently only support for windows
  */
 namespace PIOT\USBConnecting;
+
+use Exception;
+
 interface USBConnectingInterface{
    function setSerial(int $serial): void;
    function getSerial(): int;
@@ -53,7 +56,12 @@ class MYCOM implements USBConnectingInterface {
     }
 }
 
-class WindowsCOM implements USBConnectingInterface {
+interface WindowsCOMInterface extends USBConnectingInterface {
+    function send() : void;
+    function receive() : string;
+}
+
+class WindowsCOM implements WindowsCOMInterface {
     public function __construct(private USBConnectingInterface $core )
     {
         
@@ -93,12 +101,12 @@ class WindowsCOM implements USBConnectingInterface {
     {
         return $this->core->getMessage();
     }
-    public function send(){
+    public function send(): void{
         $sendCommand = 'PowerShell -Command "$port = new-Object System.IO.Ports.SerialPort COM' . $this->getSerial() 
             . ','.$this->getBAUD().',None,8,one; $port.Open(); $port.WriteLine(\'' . $this->getMessage() . '\'); $port.Close();"';
         exec($sendCommand);
     }
-    public function receive(){
+    public function receive():string{
         $readCommand = 'PowerShell -Command "$port = new-Object System.IO.Ports.SerialPort COM' 
             . $this->getSerial() . ','.$this->getBAUD().',None,8,one; $port.Open(); Start-Sleep -Seconds ' 
             . $this->getReceiveDelay() . '; $data = $port.ReadExisting(); $port.Close(); $data"';
@@ -108,10 +116,10 @@ class WindowsCOM implements USBConnectingInterface {
 
 
 class USBConnectingFactory {
-    public function create(bool $isWindows) {
+    public function create(bool $isWindows) : WindowsCOMInterface | Exception {
         if($isWindows) {
             return new WindowsCOM(new MYCOM());
         }
-        throw "Currently only support for Windows";
+        throw new \Exception("Currently only support for Windows");
     }
 }
