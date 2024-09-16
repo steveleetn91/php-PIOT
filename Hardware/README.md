@@ -15,4 +15,4 @@ This is docs support for you connect hardware. Currently framework will decision
         - IC2
         - Arduino Uno / Arduino Nano / Arduino Mega / Esp32 / ESP8266
 
-![Alt text](../LCD1602.jpeg)
+![Alt text](../LCD1602.jpg)
