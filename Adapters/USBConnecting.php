@@ -102,7 +102,7 @@ class WindowsCOM implements USBConnectingInterface {
         $readCommand = 'PowerShell -Command "$port = new-Object System.IO.Ports.SerialPort COM' 
             . $this->getSerial() . ','.$this->getBAUD().',None,8,one; $port.Open(); Start-Sleep -Seconds ' 
             . $this->getReceiveDelay() . '; $data = $port.ReadExisting(); $port.Close(); $data"';
-        return intval(shell_exec($readCommand)) === LED_ON ? 'Led on' : 'Led off';
+        return shell_exec($readCommand);
     }
 } 
 
