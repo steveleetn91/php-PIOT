@@ -9,6 +9,6 @@ define("LED_OFF",130);
 /**
  * SD CARD
  */
-
+define("LCD1604","A45");
 
 

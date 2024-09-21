@@ -102,9 +102,12 @@ class WindowsCOM implements WindowsCOMInterface {
         return $this->core->getMessage();
     }
     public function send(): void{
-        $sendCommand = 'PowerShell -Command "$port = new-Object System.IO.Ports.SerialPort COM' . $this->getSerial() 
-            . ','.$this->getBAUD().',None,8,one; $port.Open(); $port.WriteLine(\'' . $this->getMessage() . '\'); $port.Close();"';
-        exec($sendCommand);
+        $messages = str_split($this->getMessage(),5);
+        foreach($messages as $key => $value) {
+            $sendCommand = 'PowerShell -Command "$port = new-Object System.IO.Ports.SerialPort COM' . $this->getSerial() 
+                . ','.$this->getBAUD().',None,8,one; $port.Open(); $port.WriteLine(\'' . $value . '\'); $port.Close();"';
+            exec($sendCommand);    
+        }
     }
     public function receive():string{
         $readCommand = 'PowerShell -Command "$port = new-Object System.IO.Ports.SerialPort COM' 
