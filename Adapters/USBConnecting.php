@@ -95,6 +95,9 @@ class WindowsCOM implements WindowsCOMInterface {
     }
     public function setMessage(string $message): void
     {
+        if(strpos($message,"[END]") === false) {
+            $message = "[END]";
+        }
         $this->core->setMessage($message);
     }
     public function getMessage(): string
