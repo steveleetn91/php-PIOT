@@ -23,8 +23,8 @@ class Led implements LedInterface {
     {
         return $this->hardware->high();
     }
-    public function currentMode() : int{
-        return $this->hardware->currentMode() === 0 ? LED_OFF : LED_ON;
+    public function currentMode() : string{
+        return ($this->hardware->currentMode() === 0 ? LED_OFF : LED_ON) . "[END]";
     }
     public function recieve(string $electronicBoardResponse): string | Exception
     {   
