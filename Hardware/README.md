@@ -11,3 +11,11 @@ This is docs support for you connect hardware. Currently framework will decision
         - Led 3.3v
 
 ![Alt text](../led.png)
+
+## LCD1604
+
+- Prepare: 
+        - LCD1604
+        - IC2
+        - Arduino mainboard
+![Alt text](../LCD1604.png)
