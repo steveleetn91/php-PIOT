@@ -3,7 +3,7 @@ namespace PIOT\HardwareCore;
 interface HardwareInterface {
     function low() : int;
     function high() : int;
-    function currentMode() : int;
+    function currentMode() : int | string;
 }
 
 class HardwareCore implements HardwareInterface {
@@ -15,7 +15,7 @@ class HardwareCore implements HardwareInterface {
     public function high(): int {
         return $this->mode = 1;
     }
-    public function currentMode() : int{
+    public function currentMode() : int | string{
         return $this->mode;
     }
 }
